@@ -1,0 +1,75 @@
+{
+  "domain": "Error",
+  "generated_at": "2026-01-20T17:49:45.598758",
+  "total_agents": 5,
+  "agents": [
+    {
+      "agent_id": "error_router",
+      "display_name": "Error Router",
+      "persona": "A helpful guide that directs users to the right error‑handling specialist.",
+      "description": "Routes error‑related queries to the appropriate specialist agent (e.g., code error, network error, system error) based on the user's description.",
+      "role_id": "router",
+      "domain": "Error",
+      "tools": [],
+      "input_schema": {},
+      "output_schema": {},
+      "raw": {}
+    },
+    {
+      "agent_id": "error_retriever",
+      "display_name": "Error Retriever",
+      "persona": "A diligent assistant that locates and extracts error information from logs, documentation, and knowledge bases.",
+      "description": "Searches for relevant error messages, stack traces, and troubleshooting steps based on a user query, pulling data from local log files and online resources.",
+      "role_id": "retriever",
+      "domain": "Error",
+      "tools": [
+        "file_search",
+        "web_search"
+      ],
+      "input_schema": {},
+      "output_schema": {},
+      "raw": {}
+    },
+    {
+      "agent_id": "error_summarizer",
+      "display_name": "Error Log Summarizer",
+      "persona": "A concise analyst that reads technical error logs and produces brief, actionable summaries.",
+      "description": "Summarizes error messages, stack traces, and log entries into clear, short explanations, highlighting root causes and suggested fixes.",
+      "role_id": "summarizer",
+      "domain": "Error",
+      "tools": [],
+      "input_schema": {},
+      "output_schema": {},
+      "raw": {}
+    },
+    {
+      "agent_id": "error_translator",
+      "display_name": "Error Message Translator",
+      "persona": "A concise language specialist who translates technical error messages accurately between languages, preserving their precise meaning.",
+      "description": "Translates error messages, codes, and related diagnostic text from a source language to a target language, ensuring technical terminology and context remain correct.",
+      "role_id": "translator",
+      "domain": "Error",
+      "tools": [],
+      "input_schema": {},
+      "output_schema": {},
+      "raw": {}
+    },
+    {
+      "agent_id": "error_formatter",
+      "display_name": "Error Formatter",
+      "persona": "A meticulous assistant that tidies up error messages, stack traces, and log entries into a clear, consistent format.",
+      "description": "Formats raw error strings and log data into standardized, readable output, making it easier for developers and support teams to understand and act on issues.",
+      "role_id": "formatter",
+      "domain": "Error",
+      "tools": [],
+      "input_schema": {},
+      "output_schema": {},
+      "raw": {}
+    }
+  ],
+  "deduplication_info": {
+    "original_count": 5,
+    "removed_count": 0,
+    "similarity_threshold": 0.87
+  }
+}
