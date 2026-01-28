@@ -1,0 +1,37 @@
+[project]
+name = "llm-agent-factory"
+version = "0.1.0"
+description = "LLM Agent Generator - generates AgentSpec definitions from role/domain combinations"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "tqdm>=4.66.0",
+    "rich>=13.0.0",
+    "numpy>=1.24.0",
+]
+
+[project.optional-dependencies]
+dedup = [
+    "sentence-transformers>=2.2.0",
+    "faiss-cpu>=1.7.0",
+]
+dedup-light = [
+    "scikit-learn>=1.3.0",
+]
+
+[project.scripts]
+generate-agents = "script.agent_generator:main"
+deduplicate-agents = "script.agent_deduplicator:main"
+add-meta-agents = "script.add_meta_agents:main"
+curate-dataset = "script.dataset_curator:main"
+generate-tasks = "script.task_generator:main"
+
+[tool.setuptools]
+packages = ["script"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
