@@ -3,14 +3,22 @@ name = "llm-agent-factory"
 version = "0.1.0"
 description = "LLM Agent Generator - generates AgentSpec definitions from role/domain combinations"
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=0.33.0",
+    "bitsandbytes>=0.43.0",
+    "datasets>=2.19.0",
     "langchain>=0.3.0",
     "langchain-openai>=0.2.0",
+    "peft>=0.12.0",
+    "torch>=2.2.0",
+    "transformers>=4.44.0",
+    "trl>=0.9.6",
     "tqdm>=4.66.0",
     "rich>=13.0.0",
     "numpy>=1.24.0",
 ]
+
 
 [project.optional-dependencies]
 dedup = [
@@ -34,4 +42,5 @@ packages = ["script"]
 [build-system]
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
+
 
